@@ -1,0 +1,835 @@
+{% extends 'baseislas.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="d-flex col-md-2">
+        <div class="flex-shrink-0 p-3 bg-white" style="width: 300px;">
+            <a href="{% url 'base' %}"
+                class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <i class="fa-solid fa-plane-departure"></i>&nbsp;&nbsp;
+                <span class="fs-5 fw-semibold"> Servicios Especiales</span>
+            </a>
+            <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                        48 HOORASS DIA
+                    </button>
+                    <div class="collapse" id="home-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#tap1" onclick="hoorassdia()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Protocolo</a></li>
+                            <li><a href="#tap2" onclick="hoorassdia2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validación</a></li>
+                            <li><a href="#tap3" onclick="hoorassdia3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#tap4" onclick="hoorassdia4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Información
+                                    Comercial</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button
+                        class="btn btn-toggle d-inline-flex align-items-center  text-start rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#consumo48-collapse" aria-expanded="false">
+                        48 HOORASS DIA - CONSUMO COOP
+                    </button>
+                    <div class="collapse" id="consumo48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#co1" onclick="consumo48()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Protocolo</a></li>
+                            <li><a href="#co2" onclick="consumo48_2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validación</a></li>
+                            <li><a href="#co3" onclick="consumo48_3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#co4" onclick="consumo48_4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Información General</a></li>
+                            <!-- <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li> -->
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#feisa-collapse" aria-expanded="false">
+                        48 HOORASS DIA - FEISA
+                    </button>
+                    <div class="collapse" id="feisa-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="feisa()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="feisa2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="feisa3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="feisa4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Información General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#jfk-collapse" aria-expanded="false">
+                        48 HOORASS -JFK
+                    </button>
+                    <div class="collapse" id="jfk-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="jkf1_48()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Protocolo</a></li>
+                            <li><a href="#" onclick="jkf2_48()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="jkf3_48()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="jkf4_48()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center text-start rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#asepositiva-collapse" aria-expanded="false">
+                        48 HOORASS ASEGURADORA POSITIVA	
+                    </button>
+                    <div class="collapse" id="asepositiva-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="positiva1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="positiva2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="positiva3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="positiva4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#c248-collapse" aria-expanded="false">
+                        48 HOORASS- C2 MIL
+                    </button>
+                    <div class="collapse" id="c248-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="c2mil1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="c2mil2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="c2mil3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="c2mil4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#grupoe-collapse" aria-expanded="false">
+                        48 HOORASS -GRUPO EXITO
+                    </button>
+                    <div class="collapse" id="grupoe-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="grupoe1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="grupoe2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="grupoe3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="grupoe4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#exitohs48-collapse" aria-expanded="false">
+                        48 HOORASS DIA EXITO HSVM
+                    </button>
+                    <div class="collapse" id="exitohs48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="exitohs1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="exitohs2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="exitohs3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="exitohs4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#exito48-collapse" aria-expanded="false">
+                        48 HOORASS DIA EXITO TUYA
+                    </button>
+                    <div class="collapse" id="exito48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="exitotuya1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="exitotuya2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="exitotuya3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="exitotuya4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#groupseb48-collapse" aria-expanded="false">
+                        48 HOORAS- GROUP SEB-48H	
+                    </button>
+                    <div class="collapse" id="groupseb48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="groupseb1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="groupseb2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="groupseb3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="groupseb4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#natura-collapse" aria-expanded="false">
+                        48 HOORASS NATURA
+                    </button>
+                    <div class="collapse" id="natura-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="natura1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="natura2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="natura3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="natura4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#plenitud48-collapse" aria-expanded="false">
+                        48 HOORASS - PLENITUD	
+                    </button>
+                    <div class="collapse" id="plenitud48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="plenitud1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="plenitud2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="plenitud3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="plenitud4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#covid48-collapse" aria-expanded="false">
+                        48 HOORASS - COVID
+                    </button>
+                    <div class="collapse" id="covid48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="covid1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="covid2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="covid3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="covid4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#vivaair48-collapse" aria-expanded="false">
+                        48 HOORASS - VIVA AIR
+                    </button>
+                    <div class="collapse" id="vivaair48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="viva1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="viva2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="viva3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="viva4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#terra48-collapse" aria-expanded="false">
+                        48 HOORASS - TERRAWIND	
+                    </button>
+                    <div class="collapse" id="terra48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="terra1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="terra2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="terra3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="terra4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#colmena48-collapse" aria-expanded="false">
+                        48 HOORASS COLMENA 
+                    </button>
+                    <div class="collapse" id="colmena48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="colmena1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="colmena2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="colmena3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="colmena4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#globa48-collapse" aria-expanded="false">
+                        48 HOORASS - GLOBANT
+                    </button>
+                    <div class="collapse" id="globa48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="globant1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="globant2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="globant3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="globant4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#nutresa48-collapse" aria-expanded="false">
+                        48 HOORASS NUTRESA
+                    </button>
+                    <div class="collapse" id="nutresa48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="nutresa1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="nutresa2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="nutresa3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="nutresa4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#surav48-collapse" aria-expanded="false">
+                        48 HORASS - SURA VPR
+                    </button>
+                    <div class="collapse" id="surav48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="surav1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="surav2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validaciones</a></li>
+                            <li><a href="#" onclick="surav3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="surav4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">informacion General</a></li>
+                                    
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center text-start rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#argos48-collapse" aria-expanded="false">
+                        48 HOORASS - VACUNACIÓN ARGOS
+                    </button>
+                    <div class="collapse" id="argos48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="argos1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="argos2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validaciones</a></li>
+                            <li><a href="#" onclick="argos3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="argos4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center text-start rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#hoora48-collapse" aria-expanded="false">
+                        48 HOORASS DIA - ZURICH PSICOLOGIA
+                    </button>
+                    <div class="collapse" id="hoora48-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="zuri1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="zuri2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="zuri3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="zuri4()"
+                                     class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#a365-collapse" aria-expanded="false">
+                        A365 - TELECONSULTA
+                    </button>
+                    <div class="collapse" id="a365-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="a365_1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="a365_2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="a365_3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="a365_4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#amcc-collapse" aria-expanded="false">
+                        AMCOR COLOMBIA
+                    </button>
+                    <div class="collapse" id="amcc-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="amcc1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="amcc2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="amcc3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="amcc4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#axxaassi-collapse" aria-expanded="false">
+                        AXXA ASSISTANCE
+                    </button>
+                    <div class="collapse" id="axxaassi-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="axxaassi1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="axxaassi2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="axxaassi3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="axxaassi4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#axxac-collapse" aria-expanded="false">
+                        AXXA COLPATRIA
+                    </button>
+                    <div class="collapse" id="axxac-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="axxac1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="axxac2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="axxac3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="axxac4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#bmicolombia-collapse" aria-expanded="false">
+                        BMI COLOMBIA
+                    </button>
+                    <div class="collapse" id="bmicolombia-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="bmico1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="bmico2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="bmico3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="bmico4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#bmicol-collapse" aria-expanded="false">
+                        BMI COLFONDOS 
+                    </button>
+                    <div class="collapse" id="bmicol-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="bmicol1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="bmicol2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="bmicol3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="bmicol4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#cola-collapse" aria-expanded="false">
+                        COLMENA ACCIDENTES ARL
+                    </button>
+                    <div class="collapse" id="cola-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="cola1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="cola2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="cola3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="cola4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center text-start rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#funeraria-collapse" aria-expanded="false">
+                        FUNERARIA SAN JUAN BAUTISTA	
+                    </button>
+                    <div class="collapse" id="funeraria-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="funeraria1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="funeraria2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="funeraria3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="funeraria4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#komcare-collapse" aria-expanded="false">
+                        KOM CARE
+                    </button>
+                    <div class="collapse" id="komcare-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="komcare1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="komcare2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="komcare3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="komcare4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#sbsseguros-collapse" aria-expanded="false">
+                        SBS SEGUROS
+                    </button>
+                    <div class="collapse" id="sbsseguros-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="sbssegu1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="sbssegu2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="sbssegu3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="sbssegu4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#sbssd-collapse" aria-expanded="false">
+                        SBS SEGUROS- DIDI
+                    </button>
+                    <div class="collapse" id="sbssd-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="sbsdidi1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="sbsdidi2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="sbsdidi3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="sbsdidi4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#sbsd-collapse" aria-expanded="false">
+                        SBS SEGUROS-IDIPRON
+                    </button>
+                    <div class="collapse" id="sbsd-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="sbsIDI1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="sbsIDI2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="sbsIDI3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="sbsIDI4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#simcard-collapse" aria-expanded="false">
+                        SIMCARD TRAVELKIT
+                    </button>
+                    <div class="collapse" id="simcard-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="travelkit1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="travelkit2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="travelkit3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="travelkit4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#smart-collapse" aria-expanded="false">
+                        SMART GROUP
+                    </button>
+                    <div class="collapse" id="smart-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="smat1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="smat2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="smat3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="smat4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#vumi-collapse" aria-expanded="false">
+                        VUMI
+                    </button>
+                    <div class="collapse" id="vumi-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="vumi1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="vumi2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="vumi3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="vumi4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#wtac-collapse" aria-expanded="false">
+                        WTA CONTIGO
+                    </button>
+                    <div class="collapse" id="wtac-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="wtac1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="wtac2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="wtac3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="wtac4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion Gereral</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center text-start rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#aeromas-collapse" aria-expanded="false">
+                        MAS SERVICIOS – VIVA AEROBUS
+                    </button>
+                    <div class="collapse" id="aeromas-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="aero1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="aero2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="aero3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="aero4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center  rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#telegrup-collapse" aria-expanded="false">
+                        TELEMED - GRUPO MOK - SE
+                    </button>
+                    <div class="collapse" id="telegrup-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="mokse1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="mokse2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="mokse3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="mokse4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#umi-collapse" aria-expanded="false">
+                        UMI
+                    </button>
+                    <div class="collapse" id="umi-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="umi1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="umi2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="umi3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="umi4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center text-start rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#aur-collapse" aria-expanded="false">
+                        COMPAÑÍA DE SEGUROS DE VIDA AURORA
+                    </button>
+                    <div class="collapse" id="aur-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="aur1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="aur2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="aur3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="aur4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#dot-collapse" aria-expanded="false">
+                        DOT HOTELS
+                    </button>
+                    <div class="collapse" id="dot-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="dot1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="dot2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="dot3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="dot4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center text-start rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#teleaero-collapse" aria-expanded="false">
+                        TELEMED AEROSANIDAD - 48 HOORASS
+                    </button>
+                    <div class="collapse" id="teleaero-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" onclick="teleaero1()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+                            <li><a href="#" onclick="teleaero2()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Validacion</a></li>
+                            <li><a href="#" onclick="teleaero3()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Planes</a></li>
+                            <li><a href="#" onclick="teleaero4()"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Informacion General</a></li>
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="border-top my-3"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-6 col-md-10">
+        <div class="scroll-bar">
+            {% include 'serviciosEspeciales/textos.html' %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!--Cree otro html para hacer pruebas-->
+
+
+
+<!-- <div class="scroll-bar">
+    
+
+
+</div> -->
+
+{% block textos %}
+
+
+
+{% endblock %}
+
+
+
+{% block script %}
+<script src="{% static 'js/speaksEspeciales.js' %}"></script>
+{% endblock %}
+
+
+
+<!-- .servicios,
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always; -->

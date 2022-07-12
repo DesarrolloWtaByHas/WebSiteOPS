@@ -1,0 +1,96 @@
+{% extends 'baseislas.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+      <a href="../../index.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+        <i class="fa-solid fa-plane-departure"></i>&nbsp;&nbsp;
+        <span class="fs-5 fw-semibold">ISLA N</span>
+      </a>
+      <ul class="list-unstyled ps-0">
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+            48 Hoorass
+          </button>
+          <div class="collapse" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#tap1" @click="hoo1 = true, hoo2 = false, hoo3 = false, ato1 = false, ato2 = false, ato3= false,  voya1 = false, voya2=false, voya3=false,  bac1 = false, bac2 = false, bac3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Protocolo</a></li>
+              <li><a href="#tap2" @click="hoo2 = true, hoo1 = false, hoo3 = false, ato1 = false, ato2 = false, ato3= false,  voya1 = false, voya2=false, voya3=false,  bac1 = false, bac2 = false, bac3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Proveedores</a></li>
+              <li><a href="#tap3" @click="hoo3 = true, hoo2 = false, hoo1 = false, ato1 = false, ato2 = false, ato3= false,  voya1 = false, voya2=false, voya3=false,  bac1 = false, bac2 = false, bac3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Reembolso</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+            Atrio Travel
+          </button>
+          <div class="collapse" id="dashboard-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#co1" @click="ato1 = true, ato2 = false, ato3 = false, hoo1 = false, hoo2 = false, hoo3= false,  voya1 = false, voya2=false, voya3=false,  bac1 = false, bac2 = false, bac3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Protocolo</a></li>
+              <li><a href="#co2" @click="ato2 = true, ato1 = false, ato3 = false, hoo1 = false, hoo2 = false, hoo3= false,  voya1 = false, voya2=false, voya3=false,  bac1 = false, bac2 = false, bac3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Proveedores</a></li>
+              <li><a href="#co3" @click="ato3 = true, ato1 = false, ato2 = false, hoo1 = false, hoo2 = false, hoo3= false,  voya1 = false, voya2=false, voya3=false,  bac1 = false, bac2 = false, bac3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Reembolso</a></li>
+              <!-- <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li> -->
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+            Voyager
+          </button>
+          <div class="collapse" id="orders-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" @click="voya1 = true, voya2 = false, voya3 = false, hoo1 = false, hoo2 = false, hoo3= false,  ato1 = false, ato2=false, ato3=false,  bac1 = false, bac2 = false, bac3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+              <li><a href="#" @click="voya2 = true, voya1 = false, voya3 = false, hoo1 = false, hoo2 = false, hoo3= false,  ato1 = false, ato2=false, ato3=false,  bac1 = false, bac2 = false, bac3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Proveedores</a></li>
+              <li><a href="#" @click="voya3 = true, voya2 = false, voya1 = false, hoo1 = false, hoo2 = false, hoo3= false,  ato1 = false, ato2=false, ato3=false,  bac1 = false, bac2 = false, bac3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Reembolso</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse" data-bs-target="#orus-collapse" aria-expanded="false">
+            Bac Assist
+          </button>
+          <div class="collapse" id="orus-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" @click="bac1 = true, bac2 = false, bac3 = false, hoo1 = false, hoo2 = false, hoo3= false,  ato1 = false, ato2=false, ato3=false,  voya1 = false, voya2 = false, voya3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Protocolo</a></li>
+              <li><a href="#" @click="bac2 = true, bac1 = false, bac3 = false, hoo1 = false, hoo2 = false, hoo3= false,  ato1 = false, ato2=false, ato3=false,  voya1 = false, voya2 = false, voya3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Proveedores</a></li>
+              <li><a href="#" @click="bac3 = true, bac2 = false, bac1 = false, hoo1 = false, hoo2 = false, hoo3= false,  ato1 = false, ato2=false, ato3=false,  voya1 = false, voya2 = false, voya3 = false"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Reembolso</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="border-top my-3"></li>
+      </ul>
+    </div>
+
+    <div class="b-example-divider b-example-vr"></div>
+
+    {% include 'isla_N/textosRiesgo.html' %}
+
+    {% block script %}
+      <!--CDN Vue js-->
+  <script src="https://unpkg.com/vue@3"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script >
+        //Creamos una constante para guardar el acoplamiennto y montar la app
+        const  mountedApp = app.mount('#app')
+    </script>
+
+    {% endblock %}
+
+    {% endblock %}

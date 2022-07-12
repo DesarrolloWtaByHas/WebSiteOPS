@@ -1,0 +1,85 @@
+{% extends 'baseislas.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+      <a href="{% url 'base' %}" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+        <i class="fa-solid fa-plane-departure"></i>&nbsp;&nbsp;
+        <span class="fs-5 fw-semibold">ISLA N</span>
+      </a>
+      <ul class="list-unstyled ps-0">
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+            48 Hoorass
+          </button>
+          <div class="collapse" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#tap1" onclick="hooras1()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Protocolo</a></li>
+              <li><a href="#tap2" onclick="hooras2()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Proveedores</a></li>
+              <li><a href="#tap3" onclick="hooras3()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Reembolso</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+            Atrio Travel
+          </button>
+          <div class="collapse" id="dashboard-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#co1" onclick="atrioTravel1()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Protocolo</a></li>
+              <li><a href="#co2" onclick="atrioTravel2()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Proveedores</a></li>
+              <li><a href="#co3" onclick="atrioTravel3()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Reembolso</a></li>
+              <!-- <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li> -->
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+            Voyager
+          </button>
+          <div class="collapse" id="orders-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" onclick="voyager1()"
+                  class="link-dark d-inline-flex text-decoration-none rounded ">Protocolo</a></li>
+              <li><a href="#" onclick="voyager2()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Proveedores</a></li>
+              <li><a href="#" onclick="voyager3()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Reembolso</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+            data-bs-toggle="collapse" data-bs-target="#orus-collapse" aria-expanded="false">
+            Bac Assist
+          </button>
+          <div class="collapse" id="orus-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" onclick="bac1()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Protocolo</a></li>
+              <li><a href="#" onclick="bac2()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Proveedores</a></li>
+              <li><a href="#" onclick="bac3()"
+                  class="link-dark d-inline-flex text-decoration-none rounded">Reembolso</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="border-top my-3"></li>
+      </ul>
+    </div>
+
+    <div class="b-example-divider b-example-vr"></div>
+
+      {% include 'isla_N/textos.html' %}
+
+    {% endblock %}
