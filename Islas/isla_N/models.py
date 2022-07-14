@@ -29,3 +29,9 @@ class PlanesWTA(models.Model):
         return self.nombre
 
 
+class NumerosAxxaAssistance(models.Model):
+    nombre = models.CharField(max_length=150)
+    telefono = models.CharField(max_length=150)
+
+    def __str__(self):
+        return self.nombre

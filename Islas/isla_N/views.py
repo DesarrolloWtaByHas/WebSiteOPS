@@ -1,6 +1,6 @@
 from pydoc import plain
 from django.shortcuts import render
-from isla_N.models import PlanesServiciosEspeciales, PlanesKonecta,PlanesWTA,PlanesMorarbe
+from isla_N.models import PlanesServiciosEspeciales, PlanesKonecta,PlanesWTA,PlanesMorarbe, NumerosAxxaAssistance
 
 # Create your views here.
 
@@ -33,11 +33,13 @@ def serviciosEspeciales(request):
     konectas = PlanesKonecta.objects.all()
     wtas = PlanesWTA.objects.all()
     morarbes = PlanesMorarbe.objects.all()
+    numerosAxxa = NumerosAxxaAssistance.objects.all()
     context = {
         'especiales': especiales,
         'konectas': konectas,
         'wtas': wtas,
         'morarbes': morarbes,
+        'numerosAxxa': numerosAxxa,
     }
     return render(request, 'serviciosEspeciales/riesgosEspeciales.html', context)
 
