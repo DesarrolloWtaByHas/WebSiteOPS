@@ -12,9 +12,6 @@ def islaN(request):
 
 def islaNRiesgo(request):
     return render(request, 'isla_N/riesgoN.html')
-
-def islaO(request):
-    return render(request, 'isla_O/riesgoO.html')
     
 def islaU(request):
     return render(request, 'isla_U/riesgoU.html')

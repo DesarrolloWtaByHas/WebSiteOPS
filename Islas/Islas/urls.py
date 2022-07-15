@@ -18,13 +18,14 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from isla_N import views
+from islaO import views as viewsO
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.base, name="base"),
     path('islaN/', views.islaN, name="islaN"),
     path('islaN/', views.islaNRiesgo, name="riesgoN"),
-    path('islaO/', views.islaO, name="islaO"),
+    path('islaO/', viewsO.islaO, name="islaO"),
     path('islaU/', views.islaU, name="islaU"),
     path('islaE/', views.islaE, name="islaE"),
     path('islaE/', views.islaEtpa, name="tpaE"),

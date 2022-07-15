@@ -1,22 +1,115 @@
-<div class="container mt-5" style="display: none;" id="mok1">
-    <div class="row">
-      <div class="card">
-        <section class="justify-content-center">
-          <h4 class="text-center">Protocolo de Saludo</h4>
-          <p class="card-text">Gracias por comunicarse con Grupo Mok, mi nombre es: ____ queremos verificar si
-            “Autoriza usted el tratamiento de sus datos personales?</p>
-          <strong>Si la respuesta del usuario es SI</strong>
-          <p class="card-text">Lo invitamos a consultar nuestra política de tratamiento de datos personales en la
-            página web de la compañía ¿en qué le podemos ayudar?</p>
-          <strong>Si la respuesta del usuario es NO</strong>
-          <p class="card-text">Teniendo en cuenta que, para la prestación del servicio requerido, es necesario tomar
-            sus datos personales. No podremos continuar con la asistencia sin su aprobación" </p>
-
-      </div>
+<!--  Protocolo Celeste  -->
+<div class="container mt-5"  style="display: none;" id="cel1">
+  <div class="card">
+    <div class="card-header text-center">
+      INFORMACIÓN DE LA COMPAÑIA
     </div>
-    </section>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">NOMBRE DEL CLIENTE</th>
+          <th scope="col">PREFIJO</th>
+          <th scope="col">TIPO DE SERVICIO</th>
+          <th scope="col">TIPO DE PLATAFORMA</th>
+          <th scope="col">PAÍS QUE PERTENECE LA CIA</th>
+          <th scope="col">COMPAÑÍA</th>
+          <th scope="col">ASEGURADORA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{ infoAgencias.1.prefijo }} -->
+        <tr>
+          <td scope="row">{{ infoAgencias.0.nombre }}</td>
+          <td scope="row">{{ infoAgencias.0.prefijo }}</td>
+          <td scope="row">{{ infoAgencias.0.tipoServicio }}</td>
+          <td scope="row">{{ infoAgencias.0.tipoPlataforma }}</td>
+          <td scope="row">{{ infoAgencias.0.paisCia }}</td>
+          <td scope="row">{{ infoAgencias.0.compañia }}</td>
+          <td scope="row">{{ infoAgencias.0.aseguradora }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+  <br><br>
+</div>
 
+<!--  Validacion Celeste -->
+<div class="container mt-5" style="display: none;" id="cel2">
+  <div class="row">
+    <div class="card">
+      <section class="justify-content-center">
+        <h4 class="text-center">Protocolo de Proovedores</h4>
+        <p class="card-text">Gracias por comunicarse con Grupo Mok, mi nombre es: ____ queremos verificar si
+          “Autoriza usted el tratamiento de sus datos personales?</p>
+        <strong>Si la respuesta del usuario es SI</strong>
+        <p class="card-text">Lo invitamos a consultar nuestra política de tratamiento de datos personales en la
+          página web de la compañía ¿en qué le podemos ayudar?</p>
+        <strong>Si la respuesta del usuario es NO</strong>
+        <p class="card-text">Teniendo en cuenta que, para la prestación del servicio requerido, es necesario tomar
+          sus datos personales. No podremos continuar con la asistencia sin su aprobación" </p>
+
+    </div>
+  </div>
+  </section>
+</div>
+
+<!--  Planes Celeste -->
+<div class="container mt-5" style="display: none;" id="cel3">
+  <div class="row">
+    <div class="card">
+      <section class="justify-content-center">
+        <h4 class="text-center">Protocolo de Reembolso</h4>
+        <p class="card-text">Gracias por comunicarse con Grupo Mok, mi nombre es: ____ queremos verificar si
+          “Autoriza usted el tratamiento de sus datos personales?</p>
+        <strong>Si la respuesta del usuario es SI</strong>
+        <p class="card-text">Lo invitamos a consultar nuestra política de tratamiento de datos personales en la
+          página web de la compañía ¿en qué le podemos ayudar?</p>
+        <strong>Si la respuesta del usuario es NO</strong>
+        <p class="card-text">Teniendo en cuenta que, para la prestación del servicio requerido, es necesario tomar
+          sus datos personales. No podremos continuar con la asistencia sin su aprobación" </p>
+
+    </div>
+  </div>
+  </section>
+</div>
+
+
+<!--  Protocolo Grupo Mok  -->
+<div class="container mt-5"  style="display: none;" id="mok1">
+  <div class="card">
+    <div class="card-header text-center">
+      INFORMACIÓN DE LA COMPAÑIA
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">NOMBRE DEL CLIENTE</th>
+          <th scope="col">PREFIJO</th>
+          <th scope="col">TIPO DE SERVICIO</th>
+          <th scope="col">TIPO DE PLATAFORMA</th>
+          <th scope="col">PAÍS QUE PERTENECE LA CIA</th>
+          <th scope="col">COMPAÑÍA</th>
+          <th scope="col">ASEGURADORA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{ infoAgencias.1.prefijo }} -->
+        <tr>
+          <td scope="row">{{ infoAgencias.3.nombre }}</td>
+          <td scope="row">{{ infoAgencias.3.prefijo }}</td>
+          <td scope="row">{{ infoAgencias.3.tipoServicio }}</td>
+          <td scope="row">{{ infoAgencias.3.tipoPlataforma }}</td>
+          <td scope="row">{{ infoAgencias.3.paisCia }}</td>
+          <td scope="row">{{ infoAgencias.3.compañia }}</td>
+          <td scope="row">{{ infoAgencias.3.aseguradora }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br><br>
+</div>
+
+<!--  Validacion Grupo Mok  -->
   <div class="container mt-5" style="display: none;" id="mok2">
     <div class="row">
       <div class="card">
@@ -36,7 +129,7 @@
     </section>
   </div>
 
-
+<!--  Planes Grupo Mok  -->
   <div class="container mt-5" style="display: none;" id="mok3">
     <div class="row">
       <div class="card">
@@ -56,25 +149,40 @@
     </section>
   </div>
 
-
-  <div class="container mt-5" style="display: none;" id="co1">
-    <div class="row">
-      <div class="card">
-        <section class="justify-content-center">
-          <h4 class="text-center">Protocolo de Saludo</h4>
-          <p class="card-text">Gracias por comunicarse con Colsanitas, mi nombre es: ____ queremos verificar si
-            “Autoriza usted el tratamiento de sus datos personales?</p>
-          <strong>Si la respuesta del usuario es SI</strong>
-          <p class="card-text">Lo invitamos a consultar nuestra política de tratamiento de datos personales en la
-            página web de la compañía ¿en qué le podemos ayudar?</p>
-          <strong>Si la respuesta del usuario es NO</strong>
-          <p class="card-text">Teniendo en cuenta que, para la prestación del servicio requerido, es necesario tomar
-            sus datos personales. No podremos continuar con la asistencia sin su aprobación" </p>
-
-      </div>
+<!--  Protocolo Colsanitas -->
+<div class="container mt-5"  style="display: none;" id="co1">
+  <div class="card">
+    <div class="card-header text-center">
+      INFORMACIÓN DE LA COMPAÑIA
     </div>
-    </section>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">NOMBRE DEL CLIENTE</th>
+          <th scope="col">PREFIJO</th>
+          <th scope="col">TIPO DE SERVICIO</th>
+          <th scope="col">TIPO DE PLATAFORMA</th>
+          <th scope="col">PAÍS QUE PERTENECE LA CIA</th>
+          <th scope="col">COMPAÑÍA</th>
+          <th scope="col">ASEGURADORA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{ infoAgencias.1.prefijo }} -->
+        <tr>
+          <td scope="row">{{ infoAgencias.1.nombre }}</td>
+          <td scope="row">{{ infoAgencias.1.prefijo }}</td>
+          <td scope="row">{{ infoAgencias.1.tipoServicio }}</td>
+          <td scope="row">{{ infoAgencias.1.tipoPlataforma }}</td>
+          <td scope="row">{{ infoAgencias.1.paisCia }}</td>
+          <td scope="row">{{ infoAgencias.1.compañia }}</td>
+          <td scope="row">{{ infoAgencias.1.aseguradora }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+  <br><br>
+</div>
 
 
   <div class="container mt-5" style="display: none;" id="co2">
@@ -116,23 +224,38 @@
     </section>
   </div>
 
-  <div class="container mt-5" style="display: none;" id="com1">
-    <div class="row">
-      <div class="card">
-        <section class="justify-content-center">
-          <h4 class="text-center">Protocolo de Saludo</h4>
-          <p class="card-text">Gracias por comunicarse con Compensar, mi nombre es: ____ queremos verificar si
-            “Autoriza usted el tratamiento de sus datos personales?</p>
-          <strong>Si la respuesta del usuario es SI</strong>
-          <p class="card-text">Lo invitamos a consultar nuestra política de tratamiento de datos personales en la
-            página web de la compañía ¿en qué le podemos ayudar?</p>
-          <strong>Si la respuesta del usuario es NO</strong>
-          <p class="card-text">Teniendo en cuenta que, para la prestación del servicio requerido, es necesario tomar
-            sus datos personales. No podremos continuar con la asistencia sin su aprobación" </p>
-
+  <div class="container mt-5"  style="display: none;" id="com1">
+    <div class="card">
+      <div class="card-header text-center">
+        INFORMACIÓN DE LA COMPAÑIA
       </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">NOMBRE DEL CLIENTE</th>
+            <th scope="col">PREFIJO</th>
+            <th scope="col">TIPO DE SERVICIO</th>
+            <th scope="col">TIPO DE PLATAFORMA</th>
+            <th scope="col">PAÍS QUE PERTENECE LA CIA</th>
+            <th scope="col">COMPAÑÍA</th>
+            <th scope="col">ASEGURADORA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- {{ infoAgencias.1.prefijo }} -->
+          <tr>
+            <td scope="row">{{ infoAgencias.2.nombre }}</td>
+            <td scope="row">{{ infoAgencias.2.prefijo }}</td>
+            <td scope="row">{{ infoAgencias.2.tipoServicio }}</td>
+            <td scope="row">{{ infoAgencias.2.tipoPlataforma }}</td>
+            <td scope="row">{{ infoAgencias.2.paisCia }}</td>
+            <td scope="row">{{ infoAgencias.2.compañia }}</td>
+            <td scope="row">{{ infoAgencias.2.aseguradora }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    </section>
+    <br><br>
   </div>
 
 
@@ -176,23 +299,37 @@
   </div>
 
 
-  <div class="container mt-5" style="display: none;" id="med1">
-    <div class="row">
-      <div class="card">
-        <section class="justify-content-center">
-          <h4 class="text-center">Protocolo de Saludo</h4>
-          <p class="card-text">Gracias por comunicarse con medPlus, mi nombre es: ____ queremos verificar si “Autoriza
-            usted el tratamiento de sus datos personales?</p>
-          <strong>Si la respuesta del usuario es SI</strong>
-          <p class="card-text">Lo invitamos a consultar nuestra política de tratamiento de datos personales en la
-            página web de la compañía ¿en qué le podemos ayudar?</p>
-          <strong>Si la respuesta del usuario es NO</strong>
-          <p class="card-text">Teniendo en cuenta que, para la prestación del servicio requerido, es necesario tomar
-            sus datos personales. No podremos continuar con la asistencia sin su aprobación" </p>
-
+  <div class="container mt-5"  style="display: none;" id="med1">
+    <div class="card">
+      <div class="card-header text-center">
+        INFORMACIÓN DE LA COMPAÑIA
       </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">NOMBRE DEL CLIENTE</th>
+            <th scope="col">PREFIJO</th>
+            <th scope="col">TIPO DE SERVICIO</th>
+            <th scope="col">TIPO DE PLATAFORMA</th>
+            <th scope="col">PAÍS QUE PERTENECE LA CIA</th>
+            <th scope="col">COMPAÑÍA</th>
+            <th scope="col">ASEGURADORA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- {{ infoAgencias.1.prefijo }} -->
+          <tr>
+            <td scope="row">{{ infoAgencias.4.nombre }}</td>
+            <td scope="row">{{ infoAgencias.4.prefijo }}</td>
+            <td scope="row">{{ infoAgencias.4.tipoServicio }}</td>
+            <td scope="row">{{ infoAgencias.4.tipoPlataforma }}</td>
+            <td scope="row">{{ infoAgencias.4.paisCia }}</td>
+            <td scope="row">{{ infoAgencias.4.compañia }}</td>
+            <td scope="row">{{ infoAgencias.4.aseguradora }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    </section>
   </div>
 
 

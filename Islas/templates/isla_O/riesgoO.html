@@ -14,6 +14,22 @@
             <ul class="list-unstyled ps-0">
               <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse" data-bs-target="#celeste-collapse" aria-expanded="false">
+                  Celeste Permin
+                </button>
+                <div class="collapse" id="celeste-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#tap1" onclick="celeste()"
+                        class="link-dark d-inline-flex text-decoration-none rounded">Protocolo</a></li>
+                    <li><a href="#tap2" onclick="celeste2()"
+                        class="link-dark d-inline-flex text-decoration-none rounded">Proveedores</a></li>
+                    <li><a href="#tap3" onclick="celeste3()"
+                        class="link-dark d-inline-flex text-decoration-none rounded">Reembolso</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                   data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
                   Grupo MOK
                 </button>
@@ -83,8 +99,7 @@
     </div>
     <div class="col-6 col-md-10">
         <div class="scroll-bar">
-            {% include 'isla_O/textos.html' %}
-        </div>
+          {% include 'isla_O/textos.html' %}
     </div>
 </div>
 
